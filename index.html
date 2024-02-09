@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Target-850</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="flex padding">
+        <div class="logo">
+            <h1>
+                Target <span id="target">850</span>
+            </h1>
+        </div>
+        <div id="calculation-container" class="display-none">
+            <div>
+                <p class="left-amount">
+                    <span id="left-amount">850</span> AZN to the target
+                </p>
+            </div>
+            <div>
+                <p class="total-amount">
+                    Total amount: <span class="total-amount-wrapper">
+                        <span id="total-amount">0</span> AZN
+                    </span>
+                </p>
+            </div>
+        </div>
+        <div id="congrats-message" class="congrats-wrapper">
+            <span class="congrats-text">🎉🥳 Сongratulations! Нou have reached your Target 850 🥳🎉</span>
+        </div>
+        <div class="reset-btn-wrapper">
+            <button id="reset-button" class="button btn-reset">Reset</button>
+        </div>
+    </div>
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="modal-text">Do you want to reset?</span>
+            <div class="modal-buttons">
+                <button id="reset-yes" class="button btn-yes">Yes</button>
+                <button id="reset-no" class="button btn-no">No</button>
+            </div>
+        </div>
+    </div>
+    <div class="table-wrapper">
+        <table id="table">
+            <tbody id="table-body">
+            </tbody>
+        </table>
+    </div>
+    <script src="main.js"></script>
+    <script src="table.js"></script>
+</body>
+
+</html>
