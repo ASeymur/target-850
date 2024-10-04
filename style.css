@@ -10,7 +10,6 @@ body {
 }
 
 h1 {
-  color: #2c3846;
   color: #5bb9b8;
   font-size: 40px;
 }
@@ -29,12 +28,10 @@ table {
 }
 td,
 tr {
-  border: 1px solid white;
   border: 1px solid black;
   height: 50px;
   width: 100px;
   text-align: center;
-  color: white;
   font-weight: 900;
   font-size: 20px;
   color: #5bb9b8;
@@ -58,6 +55,10 @@ tr {
   border-radius: 10px;
 }
 
+.logo h1 {
+  text-wrap: nowrap;
+}
+
 .flex {
   display: flex;
   justify-content: space-between;
@@ -67,7 +68,6 @@ tr {
 .left-amount {
   border-right: 5px solid #2c3846;
   padding: 10px 20px;
-  /* border-radius: 10px; */
 }
 
 .total-amount-wrapper {
@@ -83,6 +83,8 @@ tr {
 
 .modal {
   display: none;
+  justify-content: center;
+  align-items: center;
   position: fixed;
   z-index: 1;
   left: 0;
@@ -95,7 +97,7 @@ tr {
 
 .modal-content {
   background-color: #5bb9b8;
-  margin: 20% auto;
+  margin: 0 auto;
   padding: 20px;
   border: 5px solid #2c3846;
   width: 50%;
@@ -107,7 +109,6 @@ tr {
 }
 
 .modal-text {
-  color: #5bb9b8;
   color: #2c3846;
   font-size: 30px;
   font-weight: 600;
@@ -158,10 +159,184 @@ tr {
 
 .congrats-wrapper {
   display: none;
+  text-align: center;
+  padding: 0 20px;
 }
 
 .congrats-text {
   color: #2c3846;
-  font-size: 35px;
+  font-size: 28px;
   font-weight: bold;
+}
+
+/* Responsive Styles for Smaller Screens */
+@media (max-width: 1200px) {
+  .logo h1 {
+    font-size: 30px;
+  }
+
+  p {
+    font-size: 25px;
+  }
+
+  td,
+  tr {
+    font-size: 18px;
+  }
+
+  .modal-content {
+    width: 90%;
+    font-size: 18px;
+    /* margin: 25% auto; */
+  }
+}
+
+@media (max-width: 1024px) {
+  body {
+    padding-top: 50px;
+  }
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+  }
+
+  .padding {
+    padding: 15px;
+  }
+
+  .modal-text {
+    font-size: 20px;
+  }
+
+  .reset-btn-wrapper {
+    margin-left: 10px;
+  }
+
+  .logo h1 {
+    font-size: 22px;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+
+  p {
+    font-size: 20px;
+  }
+
+  td,
+  tr {
+    font-size: 16px;
+  }
+
+  .modal-content {
+    /* margin: 25% auto; */
+  }
+
+  .btn-reset {
+    width: 80px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .button {
+    font-size: 26px;
+    width: 150px;
+  }
+
+  .padding {
+    padding: 10px;
+  }
+
+  .logo h1 {
+    font-size: 24px;
+  }
+
+  p {
+    font-size: 18px;
+  }
+
+  td,
+  tr {
+    font-size: 14px;
+    padding: 4px;
+  }
+
+  .button {
+    padding: 8px 10px;
+    font-size: 14px;
+  }
+
+}
+
+@media (max-width: 576px) {
+
+  .logo h1 {
+    font-size: 35px;
+  }
+
+}
+
+@media (max-width:  480px) {
+  body {
+    padding-bottom: 50px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  .button {
+    padding: 6px 8px;
+    font-size: 16px;
+  }
+
+}
+
+@media (max-width: 450px) {
+  .calculation-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .header {
+    gap: 50px;
+  }
+
+  .wrapper {
+    gap: 5px;
+  }
+
+  p {
+    font-size: 20px;
+  }
+
+  .left-amount {
+    border-right: none;
+    border-bottom: 5px solid #2c3846;
+  }
+
+  .modal-content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .btn-yes, .btn-no {
+    font-size: 18px;
+    width: 100px;
+  }
 }
